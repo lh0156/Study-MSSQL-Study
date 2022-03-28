@@ -29,3 +29,15 @@ ALTER TABLE dbo.memberTbl DROP COLUMN
 	,mem_point4
 ;
 
+ALTER TABLE dbo.memberTbl
+	DROP COLUMN
+		mem_point4
+		,mem_point5
+		,mem_point6
+;
+
+/* RENAME COLUMN */
+/* exec는 execute의 줄임말!
+EXEC sp_rename '테이블명.기존 컬럼명', '새 컬럼명'; */ 
+EXEC sp_rename 'dbo.memberTBL.mem_point5', 'mem_point1';
+
